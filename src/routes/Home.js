@@ -4,25 +4,22 @@ import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import Explore from "../components/Explore";
 import CanvaEmbed from "./CanvaEmbed";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import audioFile from "../assets/music/Audio.mp3";
 import bannerImg from "../assets/img/BannerImg.png"; // Gambar Banner
 
-
 function Home() {
-
     const audioRef = useRef(null);
 
-    useEffect(() => {
-        // Memutar audio saat komponen dimount
+    const handlePlayAudio = () => {
         audioRef.current.play().catch(error => {
-            console.error("Autoplay diblokir oleh browser:", error);
+            console.error("Error playing audio:", error);
         });
-    }, []);
+    };
 
     return (
         <div>
-            <audio ref={audioRef} src={audioFile} loop autoPlay />
+            <audio ref={audioRef} src={audioFile} loop />
             <Navbar />
             <Hero
                 cName="hero"
@@ -32,10 +29,11 @@ function Home() {
                 buttonText="Let's ZOO!"
                 url="/"
                 btnClass="show"
+                onButtonClick={handlePlayAudio} // Pass the function as a prop
             />
-            <IconicAnimal/>
-            <Explore/>
-            <CanvaEmbed/>
+            <IconicAnimal />
+            <Explore />
+            <CanvaEmbed />
             <Footer />
         </div>
     );
