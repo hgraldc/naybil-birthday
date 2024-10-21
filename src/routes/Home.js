@@ -9,17 +9,13 @@ import audioFile from "../assets/music/Audio.mp3";
 import bannerImg from "../assets/img/BannerImg.png"; // Gambar Banner
 
 function Home() {
-    const audioRef = useRef(null);
-
-    const handlePlayAudio = () => {
-        audioRef.current.play().catch(error => {
-            console.error("Error playing audio:", error);
-        });
-    };
+    
+    function Play () {
+        new Audio(audioFile).play()
+    }
 
     return (
         <div>
-            <audio ref={audioRef} src={audioFile} loop />
             <Navbar />
             <Hero
                 cName="hero"
@@ -29,7 +25,7 @@ function Home() {
                 buttonText="Let's ZOO!"
                 url="/"
                 btnClass="show"
-                onButtonClick={handlePlayAudio} // Pass the function as a prop
+                onButtonClick={Play} // Pass the function as a prop
             />
             <IconicAnimal />
             <Explore />
