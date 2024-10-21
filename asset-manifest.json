@@ -1,22 +1,19 @@
 {
   "files": {
     "main.css": "/naybil-birthday/static/css/main.a928039c.css",
-    "main.js": "/naybil-birthday/static/js/main.a8001eac.js",
-    "static/media/Audio.mp3": "/naybil-birthday/static/media/Audio.5a2b8ef14e542a9c19fc.mp3",
+    "main.js": "/naybil-birthday/static/js/main.25e2a340.js",
+    "static/media/Audio.mp3": "/naybil-birthday/static/media/Audio.8a1d00f33bc8a9e246af.mp3",
     "static/media/BannerImg.png": "/naybil-birthday/static/media/BannerImg.87e838b148c181d2ace6.png",
     "static/media/Panda2.jpeg": "/naybil-birthday/static/media/Panda2.f3701e72d11b156ea406.jpeg",
-    "static/media/Sam Poo Kong.jpeg": "/naybil-birthday/static/media/Sam Poo Kong.40b4bed5b1b154fb237f.jpeg",
     "static/media/Panda1.jpeg": "/naybil-birthday/static/media/Panda1.ced1f70fe0aabd405924.jpeg",
-    "static/media/Masjid Agung Jawa Tengah.jpeg": "/naybil-birthday/static/media/Masjid Agung Jawa Tengah.b8745247537c9e41b275.jpeg",
     "static/media/Kelinci1.jpeg": "/naybil-birthday/static/media/Kelinci1.3571678b402a84e24613.jpeg",
-    "static/media/Brown Canyon.jpeg": "/naybil-birthday/static/media/Brown Canyon.1f184fe91b2eae91ac8d.jpeg",
     "static/media/Kelinci2.jpeg": "/naybil-birthday/static/media/Kelinci2.526bccd84eb2d0b2feaa.jpeg",
     "index.html": "/naybil-birthday/index.html",
     "main.a928039c.css.map": "/naybil-birthday/static/css/main.a928039c.css.map",
-    "main.a8001eac.js.map": "/naybil-birthday/static/js/main.a8001eac.js.map"
+    "main.25e2a340.js.map": "/naybil-birthday/static/js/main.25e2a340.js.map"
   },
   "entrypoints": [
     "static/css/main.a928039c.css",
-    "static/js/main.a8001eac.js"
+    "static/js/main.25e2a340.js"
   ]
 }
