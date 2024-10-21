@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/naybil-birthday/static/css/main.88f5fe22.css",
+    "main.js": "/naybil-birthday/static/js/main.00bdee82.js",
+    "static/media/Audio.mp3": "/naybil-birthday/static/media/Audio.f39b52e4eea8fc0c7a16.mp3",
+    "static/media/BannerImg.png": "/naybil-birthday/static/media/BannerImg.87e838b148c181d2ace6.png",
+    "static/media/Panda2.jpeg": "/naybil-birthday/static/media/Panda2.f3701e72d11b156ea406.jpeg",
+    "static/media/Panda1.jpeg": "/naybil-birthday/static/media/Panda1.ced1f70fe0aabd405924.jpeg",
+    "static/media/Kelinci1.jpeg": "/naybil-birthday/static/media/Kelinci1.3571678b402a84e24613.jpeg",
+    "static/media/Kelinci2.jpeg": "/naybil-birthday/static/media/Kelinci2.526bccd84eb2d0b2feaa.jpeg",
+    "index.html": "/naybil-birthday/index.html",
+    "main.88f5fe22.css.map": "/naybil-birthday/static/css/main.88f5fe22.css.map",
+    "main.00bdee82.js.map": "/naybil-birthday/static/js/main.00bdee82.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.88f5fe22.css",
+    "static/js/main.00bdee82.js"
+  ]
+}
