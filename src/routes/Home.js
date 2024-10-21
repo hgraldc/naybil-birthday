@@ -5,14 +5,36 @@ import Navbar from "../components/Navbar";
 import Explore from "../components/Explore";
 import CanvaEmbed from "./CanvaEmbed";
 import { useRef } from "react";
-import audioFile from "../assets/music/Audio.mp3";
+import audioFile from "../assets/music/Audio.mp3"; // Audio file
 import bannerImg from "../assets/img/BannerImg.png"; // Gambar Banner
 
 function Home() {
-    
-    function Play () {
-        new Audio(audioFile).play()
-    }
+    const audioRef = useRef(new Audio(audioFile));
+
+    const handlePlayAudio = () => {
+        // Set the audio current time to 0
+        audioRef.current.currentTime = 0;
+        // Play the audio
+        audioRef.current.play().catch(error => {
+            console.error("Error playing audio:", error);
+        });
+    };
+
+    // Set up event listener to loop the audio
+    const handleAudioEnd = () => {
+        audioRef.current.currentTime = 0; // Reset to start
+        audioRef.current.play(); // Play again
+    };
+
+    // Add event listener when the component mounts
+    useRef(() => {
+        audioRef.current.addEventListener('ended', handleAudioEnd);
+
+        // Clean up the event listener on component unmount
+        return () => {
+            audioRef.current.removeEventListener('ended', handleAudioEnd);
+        };
+    }, []);
 
     return (
         <div>
@@ -25,7 +47,7 @@ function Home() {
                 buttonText="Let's ZOO!"
                 url="/"
                 btnClass="show"
-                onButtonClick={Play} // Pass the function as a prop
+                onButtonClick={handlePlayAudio} // Pass the function as a prop
             />
             <IconicAnimal />
             <Explore />
