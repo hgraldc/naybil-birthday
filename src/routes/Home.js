@@ -12,36 +12,18 @@ function Home() {
     const audioRef = useRef(new Audio(audioFile));
 
     const handlePlayAudio = () => {
-        // Set the audio current time to 0
-        audioRef.current.currentTime = 0;
-        // Play the audio
+        audioRef.current.currentTime = 0; // Set to start
         audioRef.current.play().catch(error => {
             console.error("Error playing audio:", error);
         });
     };
-
-    // Set up event listener to loop the audio
-    const handleAudioEnd = () => {
-        audioRef.current.currentTime = 0; // Reset to start
-        audioRef.current.play(); // Play again
-    };
-
-    // Add event listener when the component mounts
-    useRef(() => {
-        audioRef.current.addEventListener('ended', handleAudioEnd);
-
-        // Clean up the event listener on component unmount
-        return () => {
-            audioRef.current.removeEventListener('ended', handleAudioEnd);
-        };
-    }, []);
 
     return (
         <div>
             <Navbar />
             <Hero
                 cName="hero"
-                heroImg={bannerImg} // Menggunakan gambar banner
+                heroImg={bannerImg}
                 title="Find Your Animal"
                 text="Choose an Animal that Describes You"
                 buttonText="Let's ZOO!"
